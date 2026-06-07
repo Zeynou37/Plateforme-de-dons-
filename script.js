@@ -494,12 +494,13 @@ function openModal(id) {
   });
 
   sendBtn.addEventListener('click', () => {
-    sendBtn.disabled = true;
-    setTimeout(() => {
-      showToast(T[lang].ss_ok);
-      rmBtn.click();
-      sendBtn.disabled = false;
-    }, 1100);
+    const phone = '22236744422'; // ← ضع رقم واتساب الجمعية هنا (مع رمز الدولة بدون +)
+    const msg = lang === 'ar'
+      ? `السلام عليكم، أرسل لقطة الشاشة كإثبات تبرعي.\nرقم التبرع: ${d.don_num}\nالعنوان: ${d.title_ar}`
+      : `Bonjour, voici ma capture d'écran comme preuve de don.\nN° du don: ${d.don_num}\nTitre: ${d.title_fr}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+    showToast(T[lang].ss_ok);
   });
 
   shareBtn.addEventListener('click', () => {
