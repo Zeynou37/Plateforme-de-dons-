@@ -563,3 +563,20 @@ body[data-lang="ar"] .ss-rm{left:auto;right:22px}
 .badge:hover .ic-sun  { animation-duration: 1s; }
 .badge:hover .ic-moon { animation-duration: 0.8s; }
 .badge:hover .ic-bolt { animation-duration: 0.4s; }
+.ic-dark svg {
+  animation: floatMoon 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(129,140,248,0.7));
+  display: block;
+}
+
+.ic-light svg {
+  animation: spinSun 8s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(245,158,11,0.6));
+  display: block;
+}
+
+#btn-theme:hover .ic-dark svg,
+#btn-theme:hover .ic-light svg {
+  animation-duration: 1s;
+  filter: drop-shadow(0 0 8px currentColor);
+}
