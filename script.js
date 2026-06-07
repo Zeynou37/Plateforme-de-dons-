@@ -59,6 +59,7 @@ const T = {
     share:'مشاركة هذا التبرع',
     share_ok:'تم نسخ الرابط! شاركه مع الآخرين 🤲',
     vis:'زائر اليوم',
+    na: 'غير متوفرة',
     not_img:'يجب أن يكون الملف صورة',
     too_big:'الصورة أكبر من 5 ميغابايت',
   },
@@ -78,6 +79,7 @@ const T = {
     share:'Partager ce don',
     share_ok:'Lien copié ! Partagez avec les autres 🤲',
     vis:'visiteur(s)',
+    na: 'Non disponible',
     not_img:"Le fichier doit être une image",
     too_big:'Image trop lourde (max 5 Mo)',
   },
@@ -105,8 +107,9 @@ function esc(s) {
 }
 
 function fmtDate(str) {
+  if (!str) return T[lang].na;
   const d = new Date(str);
-  if (isNaN(d)) return str;
+  if (isNaN(d)) return T[lang].na;
   const loc = lang === 'ar' ? 'ar-SA' : 'fr-FR';
   return d.toLocaleDateString(loc, {year:'numeric',month:'short',day:'numeric'});
 }
@@ -223,7 +226,7 @@ function cardHTML(d, i) {
     <div class="card-don-num">
       ${IC_HASH}
       <span class="don-num-lbl">${t.don_num}:</span>
-      <span class="don-num-val">${esc(d.don_num)}</span>
+      <span class="don-num-val">${esc(d.don_num || t.na)}</span>
     </div>
   </div>
   <div class="card-bottom">
@@ -273,7 +276,7 @@ function openModal(id) {
 </div>
 <div class="mrow">
   <span class="mlbl">${t.don_num}</span>
-  <span class="mval"><span class="mval-code">${esc(d.don_num)}</span></span>
+  <span class="mval"><span class="mval-code">${esc(d.don_num || t.na)}</span></span>
 </div>
 <div class="mrow">
   <span class="mlbl">${t.target}</span>
@@ -293,7 +296,7 @@ function openModal(id) {
 </div>
 <div class="mrow">
   <span class="mlbl">${t.assoc}</span>
-  <span class="mval">${esc(d.assoc)}</span>
+  <span class="mval">${esc(d.assoc || t.na)}</span>
 </div>
 <div class="mrow" style="border-bottom:none">
   <span class="mlbl"></span>
