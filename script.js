@@ -76,7 +76,7 @@ const DONATIONS = [
     desc_ar:   'مشروع بناء مسجد في قرية تفتقر إلى مكان للصلاة',
     desc_fr:   'Construction d\'une mosquée dans un village dépourvu de lieu de prière.',
     goal_ar:   '700  أوقية قديمة', goal_fr: '700 MRU',
-    open_date: '2026-06-01',     close_date: '2026-06-13',
+    open_date: '2026-06-01',     close_date: 'غير متوفر',
     don_num:   '20099999', email: '234037@isgm.mr',
     assoc:     'جمعية نسائم الخير',
     verse_ar:  '« مَنْ بَنَى مَسْجِدًا لِلَّهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الجَنَّةِ » — رواه مسلم',
