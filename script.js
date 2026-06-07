@@ -6,7 +6,7 @@
 const DONATIONS = [
   // ── GAZA ──
   {
-    id: 'g1', cat: 'gaza', status: 'open', urgent: true,
+    id: 'g1', cat: 'gaza', status: 'close', urgent: false,
     title_ar:  'إغاثة أطفال غزة — طرود غذائية',
     title_fr:  'Secours enfants de Gaza — Colis alimentaires',
     target_ar: 'أطفال قطاع غزة المحاصرين',
@@ -14,8 +14,8 @@ const DONATIONS = [
     desc_ar:   'توفير طرود غذائية طارئة للأطفال الذين فقدوا مصادر التغذية جراء الحصار. كل طرد يكفي عائلة لأسبوعين كاملين.',
     desc_fr:   "Fourniture de colis alimentaires d'urgence aux enfants privés de nourriture à cause du blocus. Chaque colis suffit une famille pour deux semaines.",
     goal_ar:   '500,000 أوقية',  goal_fr: '500 000 MRU',
-    open_date: '2024-10-15',      close_date: '2025-12-31',
-    don_num:   'DON-GZ-2024-001', email: 'dons@jama3a-rouaa.mr',
+    open_date: 'غير متوفر',      close_date: 'غير متوفر',
+    don_num:   'غير متوفر', email: 'dons@jama3a-rouaa.mr',
     assoc:     'جمعية الرعاة',
     verse_ar:  '﴿ وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ﴾ — الإنسان: ٨',
     verse_fr:  "﴿ Ils donnent à manger, par amour pour Lui, au pauvre, à l'orphelin et au captif ﴾ — Al-Insan: 8",
