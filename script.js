@@ -160,28 +160,26 @@ function showToast(msg) {
 /* ============================================================
    VISITOR COUNTER
 ============================================================ */
-function trackVisitor() {
+async function trackVisitor() {
   try {
-    const cv = document.createElement('canvas');
-    const cx = cv.getContext('2d');
-    cx.textBaseline = 'top'; cx.font = '14px Arial';
-    cx.fillText('x', 2, 2);
-    const fp = btoa(
-      cv.toDataURL().slice(-18) +
-      navigator.language +
-      screen.width +
-      new Date().getTimezoneOffset()
-    ).replace(/[^a-z0-9]/gi,'').slice(0,14);
+    // جلب IP حقيقي من API مجاني
+    const res  = await fetch('https://api.ipify.org?format=json');
+    const data = await res.json();
+    const ip   = data.ip || 'unknown';
 
     const today = new Date().toDateString();
     let rec = JSON.parse(localStorage.getItem('rua3a_day') || '{"date":"","ids":[],"n":0}');
-    if (rec.date !== today) rec = {date:today, ids:[], n:0};
-    if (!rec.ids.includes(fp)) { rec.ids.push(fp); rec.n++; }
+    if (rec.date !== today) rec.date = today;
+    if (!rec.ids.includes(ip)) {
+      rec.ids.push(ip);
+      rec.n++;
+    }
     localStorage.setItem('rua3a_day', JSON.stringify(rec));
     return rec.n;
-  } catch(e) { return 1; }
+  } catch(e) {
+    return 1;
+  }
 }
-
 /* ============================================================
    RENDER CARDS
 ============================================================ */
@@ -536,8 +534,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
 
   // Visitor
-  const vc = trackVisitor();
+  trackVisitor().then(vc => {
   countUp(document.getElementById('vis-count'), vc, 1400);
+});
 
   // Render
   renderCards();
