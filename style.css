@@ -524,3 +524,42 @@ body[data-lang="ar"] .ss-rm{left:auto;right:22px}
 .gaza-hdr .cat-icon svg:hover {
   filter: drop-shadow(0 0 8px #22c55e);
 }
+/* ── Animated Icons ── */
+.ic-anim {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.35s ease;
+}
+
+.ic-sun {
+  animation: spinSun 8s linear infinite;
+  filter: drop-shadow(0 0 3px rgba(245,158,11,0.5));
+}
+@keyframes spinSun {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.ic-moon {
+  animation: floatMoon 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 3px rgba(129,140,248,0.6));
+}
+@keyframes floatMoon {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50%       { transform: translateY(-2px) rotate(5deg); }
+}
+
+.ic-bolt {
+  animation: flashBolt 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(245,158,11,0.7));
+}
+@keyframes flashBolt {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Hover boost */
+.badge:hover .ic-sun  { animation-duration: 1s; }
+.badge:hover .ic-moon { animation-duration: 0.8s; }
+.badge:hover .ic-bolt { animation-duration: 0.4s; }
