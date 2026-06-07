@@ -36,7 +36,7 @@ const DONATIONS = [
     verse_fr:  '« Quiconque soulage un croyant, Allah le soulagera au Jour de la Résurrection » — Muslim',
   },
   {
-    id: 'g1', cat: 'gaza', status: 'open', urgent: true,
+    id: 'g3', cat: 'gaza', status: 'open', urgent: true,
     title_ar:  'إغاثة أطفال غزة — طرود غذائية',
     title_fr:  'Secours enfants de Gaza — Colis alimentaires',
     target_ar: 'أطفال قطاع غزة المحاصرين',
@@ -50,8 +50,6 @@ const DONATIONS = [
     verse_ar:  '﴿ وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ﴾ — الإنسان: ٨',
     verse_fr:  "﴿ Ils donnent à manger, par amour pour Lui, au pauvre, à l'orphelin et au captif ﴾ — Al-Insan: 8",
   },
- 
-
   // ── OTHER ──
   {
     id: 'o1', cat: 'other', status: 'open', urgent: true,
@@ -67,9 +65,7 @@ const DONATIONS = [
     assoc:     'جمعية نسائم الخير',
     verse_ar:  '« مَنْ بَنَى مَسْجِدًا لِلَّهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الجَنَّةِ » — رواه مسلم',
     verse_fr:  '« Quiconque construit une mosquée pour Allah, Allah lui construira une maison au Paradis » — Muslim',
-  },
-  {
-  
+  },  
 ];
 
 /* ============================================================
