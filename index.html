@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة التبرعات </title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body class="dark-mode" data-lang="ar">
+
+  <div id="particles-bg"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="23" stroke="#4d8eff" stroke-width="1.5"/>
+            <path d="M25 8 C16 16, 8 20, 12 31 C16 42, 34 42, 38 31 C42 20, 34 16, 25 8Z" fill="#4d8eff" opacity="0.15"/>
+            <circle cx="25" cy="27" r="5" fill="#4d8eff" opacity="0.8"/>
+            <path d="M20 22 Q25 15 30 22" stroke="#4d8eff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main" data-ar="منصة التبرعات" data-fr="Plateforme des Dons">منصة التبرعات</span>
+          <span class="logo-sub" data-ar="جمعية الرعاة" data-fr="Association des Bergers">لتسهيل عمليات التبرع</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="visitor-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span id="vis-count">0</span>
+          <span class="vis-label" data-ar="زائر اليوم" data-fr="visiteur(s)">زائر اليوم</span>
+        </div>
+        <button id="btn-lang" class="ctrl-btn">
+          <span id="lang-label">FR</span>
+        </button>
+        <button id="btn-theme" class="ctrl-btn">
+          <span class="ic-dark">🌙</span>
+          <span class="ic-light" style="display:none">☀️</span>
+        </button>
+      </div>
+    </div>
+    <!-- Quran ticker -->
+    <div class="quran-bar" id="quran-bar">
+      <div class="quran-track">
+        <span>﴿ مَّثَلُ الَّذِينَ يُنفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ كَمَثَلِ حَبَّةٍ أَنبَتَتْ سَبْعَ سَنَابِلَ ﴾ — البقرة: ٢٦١</span>
+        <span class="qs">✦</span>
+        <span>﴿ وَمَا تُنفِقُوا مِنْ خَيْرٍ فَلِأَنفُسِكُمْ ﴾ — البقرة: ٢٧٢</span>
+        <span class="qs">✦</span>
+        <span>« مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ » — رواه مسلم</span>
+        <span class="qs">✦</span>
+        <span>﴿ لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ﴾ — آل عمران: ٩٢</span>
+        <span class="qs">✦</span>
+        <span>« السَّاعِي عَلَى الأَرْمَلَةِ وَالمِسْكِينِ كَالمُجَاهِدِ فِي سَبِيلِ اللَّهِ » — متفق عليه</span>
+        <span class="qs">✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge" data-ar="مبادرة خيرية مفتوحة" data-fr="Initiative caritative ouverte">مبادرة خيرية مفتوحة</div>
+      <h1 class="hero-title">
+        <span data-ar="قوائم التبرعات" data-fr="Listes des Dons">قوائم التبرعات</span>
+        <br/>
+        <span class="hero-accent" data-ar="المفتوحة" data-fr="Ouvertes">المفتوحة</span>
+      </h1>
+      <p class="hero-desc" data-ar="تصفح التبرعات المتاحة، تعرف على الجهات المستفيدة وتاريخ الإغلاق — بشفافية تامة." data-fr="Consultez les dons disponibles, les bénéficiaires et les dates de clôture — en toute transparence.">
+        تصفح التبرعات المتاحة، تعرف على الجهات المستفيدة وتاريخ الإغلاق — بشفافية تامة.
+      </p>
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-n" id="st-open">0</span>
+          <span class="stat-l" data-ar="مفتوح" data-fr="Ouvert">مفتوح</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-box">
+          <span class="stat-n" id="st-gaza">0</span>
+          <span class="stat-l" data-ar="لغزة" data-fr="Gaza">لغزة</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-box">
+          <span class="stat-n" id="st-other">0</span>
+          <span class="stat-l" data-ar="أخرى" data-fr="Autres">أخرى</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-deco">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+      <svg class="crescent-svg" viewBox="0 0 120 120" fill="none">
+        <circle cx="60" cy="60" r="52" stroke="#4d8eff" stroke-width="1" stroke-dasharray="4 6" opacity="0.3"/>
+        <path d="M60 18 C38 18, 20 38, 20 60 C20 82, 38 102, 60 102 C47 92, 38 77, 38 60 C38 43, 47 28, 60 18Z" fill="#4d8eff" opacity="0.1"/>
+        <path d="M60 22 C40 22, 24 40, 24 60 C24 80, 40 98, 60 98 C49 88, 42 75, 42 60 C42 45, 49 32, 60 22Z" stroke="#4d8eff" stroke-width="1.2" fill="none" opacity="0.4"/>
+        <circle cx="76" cy="28" r="4" fill="#4d8eff" opacity="0.5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- VERSE -->
+  <section class="verse-section">
+    <div class="verse-card">
+      <div class="v-line top"></div>
+      <blockquote class="v-text" data-ar="﴿ لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ﴾" data-fr="﴿ Vous n'obtiendrez jamais la piété parfaite, tant que vous ne dépenserez pas de ce que vous aimez ﴾">
+        ﴿ لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ ﴾
+      </blockquote>
+      <cite class="v-ref" data-ar="سورة آل عمران: ٩٢" data-fr="Sourate Al-Imran : 92">سورة آل عمران: ٩٢</cite>
+      <div class="v-line bottom"></div>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filter-section">
+    <div class="filter-bar">
+      <div class="search-wrap">
+        <svg class="search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search-input" type="text" class="search-input" placeholder="ابحث عن تبرع..."
+               data-ph-ar="ابحث عن تبرع..." data-ph-fr="Rechercher un don..." />
+      </div>
+      <div class="chips">
+        <button class="chip active" data-f="all">
+          <span data-ar="الكل" data-fr="Tout">الكل</span>
+        </button>
+        <button class="chip" data-f="open">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span data-ar="مفتوح" data-fr="Ouvert">مفتوح</span>
+        </button>
+        <button class="chip" data-f="closed">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span data-ar="مغلق" data-fr="Clôturé">مغلق</span>
+        </button>
+        <button class="chip" data-f="urgent">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span data-ar="عاجل" data-fr="Urgent">عاجل</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="main-wrap">
+
+    <!-- GAZA SECTION -->
+    <section class="cat-section" id="sec-gaza">
+      <div class="cat-header gaza-hdr">
+        <div class="cat-title-wrap">
+          <span class="cat-icon">🇵🇸</span>
+          <div>
+            <h2 class="cat-title" data-ar="تبرعات غزة الصامدة" data-fr="Dons pour Gaza la Résistante">تبرعات غزة الصامدة</h2>
+            <p class="cat-sub" data-ar="نصرة لإخواننا في فلسطين" data-fr="Soutien à nos frères en Palestine">نصرة لإخواننا في فلسطين</p>
+          </div>
+        </div>
+        <div class="cat-verse" data-ar="« اللَّهُمَّ انْصُرْ إِخْوَانَنَا المُسْتَضْعَفِينَ »" data-fr="Ô Allah, secours nos frères opprimés">
+          « اللَّهُمَّ انْصُرْ إِخْوَانَنَا المُسْتَضْعَفِينَ »
+        </div>
+      </div>
+      <div class="cards-grid" id="grid-gaza"></div>
+    </section>
+
+    <!-- OTHER SECTION -->
+    <section class="cat-section" id="sec-other">
+      <div class="cat-header other-hdr">
+        <div class="cat-title-wrap">
+          <span class="cat-icon">🌙</span>
+          <div>
+            <h2 class="cat-title" data-ar="تبرعات أخرى" data-fr="Autres Dons">تبرعات أخرى</h2>
+            <p class="cat-sub" data-ar="قضايا خيرية متنوعة تستحق دعمك" data-fr="Autres causes méritant votre soutien">قضايا خيرية متنوعة تستحق دعمك</p>
+          </div>
+        </div>
+        <div class="cat-verse" data-ar="﴿ وَفِي أَمْوَالِهِمْ حَقٌّ لِّلسَّائِلِ وَالْمَحْرُومِ ﴾" data-fr="﴿ Dans leurs biens, il y a un droit pour le mendiant ﴾">
+          ﴿ وَفِي أَمْوَالِهِمْ حَقٌّ لِّلسَّائِلِ وَالْمَحْرُومِ ﴾
+        </div>
+      </div>
+      <div class="cards-grid" id="grid-other"></div>
+    </section>
+
+  </main>
+
+  <div id="empty-msg" style="display:none" class="empty-msg">
+    <p data-ar="لا توجد نتائج" data-fr="Aucun résultat">لا توجد نتائج</p>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal-bg" class="modal-bg">
+    <div id="modal-box" class="modal-box" role="dialog">
+      <button id="modal-close" class="modal-close">✕</button>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-verse">
+        <span data-ar="« مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ » — رواه مسلم" data-fr="« Celui qui guide vers le bien a une récompense égale à son auteur » — Muslim">
+          « مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ » — رواه مسلم
+        </span>
+      </div>
+      <div class="footer-info">
+        <span data-ar="جمعية الرعاة © 2025" data-fr="Association des Bergers © 2025">منصةالتبرعات © 2025</span>
+        <span class="footer-secure">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span data-ar="موقع آمن" data-fr="Site sécurisé">موقع آمن</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
