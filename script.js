@@ -77,7 +77,7 @@ const DONATIONS = [
     desc_fr:   'Construction d\'une mosquée dans un village dépourvu de lieu de prière.',
     goal_ar:   '700  أوقية قديمة', goal_fr: '700 MRU',
     open_date: '2026-06-01',     close_date: '2026-06-13',
-    don_num:   '20099999', email: 'masjid@jama3a-rouaa.mr',
+    don_num:   '20099999', email: '234037@isgm.mr',
     assoc:     'جمعية نسائم الخير',
     verse_ar:  '« مَنْ بَنَى مَسْجِدًا لِلَّهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الجَنَّةِ » — رواه مسلم',
     verse_fr:  '« Quiconque construit une mosquée pour Allah, Allah lui construira une maison au Paradis » — Muslim',
