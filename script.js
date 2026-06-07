@@ -5,7 +5,52 @@
 ============================================================ */
 const DONATIONS = [
   // ── GAZA ──
-  
+  {
+    id: 'g1', cat: 'gaza', status: 'open', urgent: true,
+    title_ar:  'إغاثة أطفال غزة — طرود غذائية',
+    title_fr:  'Secours enfants de Gaza — Colis alimentaires',
+    target_ar: 'أطفال قطاع غزة المحاصرين',
+    target_fr: 'Enfants assiégés de Gaza',
+    desc_ar:   'توفير طرود غذائية طارئة للأطفال الذين فقدوا مصادر التغذية جراء الحصار. كل طرد يكفي عائلة لأسبوعين كاملين.',
+    desc_fr:   "Fourniture de colis alimentaires d'urgence aux enfants privés de nourriture à cause du blocus. Chaque colis suffit une famille pour deux semaines.",
+    goal_ar:   '500,000 أوقية',  goal_fr: '500 000 MRU',
+    open_date: '2024-10-15',      close_date: '2025-12-31',
+    don_num:   'DON-GZ-2024-001', email: 'dons@jama3a-rouaa.mr',
+    assoc:     'جمعية الرعاة',
+    verse_ar:  '﴿ وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ﴾ — الإنسان: ٨',
+    verse_fr:  "﴿ Ils donnent à manger, par amour pour Lui, au pauvre, à l'orphelin et au captif ﴾ — Al-Insan: 8",
+  },
+  {
+    id: 'g2', cat: 'gaza', status: 'open', urgent: true,
+    title_ar:  'دعم المستشفيات الميدانية بغزة',
+    title_fr:  'Soutien aux hôpitaux de campagne de Gaza',
+    target_ar: 'المنظومة الصحية في قطاع غزة',
+    target_fr: 'Système médical de Gaza',
+    desc_ar:   'شراء معدات طبية ومستلزمات جراحية وأدوية طارئة لدعم الكوادر الطبية المرابطة في المستشفيات الميدانية.',
+    desc_fr:   "Achat de matériel médical, consommables chirurgicaux et médicaments d'urgence pour les équipes médicales sur place.",
+    goal_ar:   '1,200,000 أوقية', goal_fr: '1 200 000 MRU',
+    open_date: '2024-11-01',       close_date: '2025-11-30',
+    don_num:   'DON-GZ-2024-002',  email: 'sante@jama3a-rouaa.mr',
+    assoc:     'جمعية الرعاة',
+    verse_ar:  '« مَنْ نَفَّسَ عَنْ مُؤْمِنٍ كُرْبَةً مِنْ كُرَبِ الدُّنْيَا نَفَّسَ اللَّهُ عَنْهُ كُرْبَةً مِنْ كُرَبِ يَوْمِ الْقِيَامَةِ » — رواه مسلم',
+    verse_fr:  '« Quiconque soulage un croyant, Allah le soulagera au Jour de la Résurrection » — Muslim',
+  },
+  {
+    id: 'g1', cat: 'gaza', status: 'open', urgent: true,
+    title_ar:  'إغاثة أطفال غزة — طرود غذائية',
+    title_fr:  'Secours enfants de Gaza — Colis alimentaires',
+    target_ar: 'أطفال قطاع غزة المحاصرين',
+    target_fr: 'Enfants assiégés de Gaza',
+    desc_ar:   'توفير طرود غذائية طارئة للأطفال الذين فقدوا مصادر التغذية جراء الحصار. كل طرد يكفي عائلة لأسبوعين كاملين.',
+    desc_fr:   "Fourniture de colis alimentaires d'urgence aux enfants privés de nourriture à cause du blocus. Chaque colis suffit une famille pour deux semaines.",
+    goal_ar:   '500,000 أوقية',  goal_fr: '500 000 MRU',
+    open_date: '2024-10-15',      close_date: '2025-12-31',
+    don_num:   'DON-GZ-2024-001', email: 'dons@jama3a-rouaa.mr',
+    assoc:     'جمعية الرعاة',
+    verse_ar:  '﴿ وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا ﴾ — الإنسان: ٨',
+    verse_fr:  "﴿ Ils donnent à manger, par amour pour Lui, au pauvre, à l'orphelin et au captif ﴾ — Al-Insan: 8",
+  },
+ 
 
   // ── OTHER ──
   {
