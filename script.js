@@ -76,7 +76,7 @@ const DONATIONS = [
     desc_ar:   'مشروع بناء مسجد في قرية تفتقر إلى مكان للصلاة',
     desc_fr:   'Construction d\'une mosquée dans un village dépourvu de lieu de prière.',
     goal_ar:   '700  أوقية قديمة', goal_fr: '700 MRU',
-    open_date: '2026-06-01',     close_date: '2026-06-01',
+    open_date: '2026-06-01',     close_date: '2026-06-13',
     don_num:   '20099999', email: 'masjid@jama3a-rouaa.mr',
     assoc:     'جمعية نسائم الخير',
     verse_ar:  '« مَنْ بَنَى مَسْجِدًا لِلَّهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الجَنَّةِ » — رواه مسلم',
@@ -151,7 +151,7 @@ const T = {
   ar: {
     open:'مفتوح', closed:'مغلق', urgent:'عاجل',
     close_date:'تاريخ الإغلاق', open_date:'تاريخ الفتح',
-    target:'الجهة المستفيدة', goal:'الهدف المالي',
+    target:'الجهة المستفيدة', goal:'السهم المالي',
     assoc:'الجمعية', status:'الحالة', don_num:'رقم التبرع',
     details:'التفاصيل',
     ss_title:'إرسال لقطة الشاشة بعد التبرع',
@@ -170,7 +170,7 @@ const T = {
   fr: {
     open:'Ouvert', closed:'Clôturé', urgent:'Urgent',
     close_date:"Date de clôture", open_date:"Date d'ouverture",
-    target:'Bénéficiaire', goal:'Objectif',
+    target:'Bénéficiaire', goal:'Actions financières',
     assoc:'Association', status:'Statut', don_num:'N° du don',
     details:'Détails',
     ss_title:'Envoyer une capture après le don',
