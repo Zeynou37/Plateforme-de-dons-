@@ -23,7 +23,7 @@ const DONATIONS = [
 
   // ── OTHER ──
   {
-    id: 'o1', cat: 'other', status: 'open', urgent: true,
+    id: 'o1', cat: 'other', status: 'open', urgent: false,
     title_ar:  'بناء مسجد',
     title_fr:  'Construction d\'une mosquée',
     target_ar: 'null',
@@ -44,13 +44,11 @@ const DONATIONS = [
     target_ar: 'غير متوفر',
     target_fr: 'indisponible',
     desc_ar:   'مشروع للحصول على باص لنقل المرضى',
-    desc_fr:   'Un projet d'acquisition d'un bus pour le transport des patients ',
+    desc_fr:   'Un projet d\'acquisition d\'un bus pour le transport des patients ',
     goal_ar:   '14  مليون أوقية قديمة', goal_fr: '14 millions MRU',
     open_date: '2026-07-06',     close_date: 'null',
     don_num:   '20453560', email: '234037@isgm.mr',
     assoc:     'جمعية إيثار للتڪفل بمرضى السرطان',
-    verse_ar:  '« مَنْ بَنَى مَسْجِدًا لِلَّهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الجَنَّةِ » — رواه مسلم',
-    verse_fr:  '« Quiconque construit une mosquée pour Allah, Allah lui construira une maison au Paradis » — Muslim',
   },  
 ];
 
