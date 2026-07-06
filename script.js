@@ -23,7 +23,7 @@ const DONATIONS = [
 
   // ── OTHER ──
   {
-    id: 'o1', cat: 'other', status: 'open', urgent: false,
+    id: 'o1', cat: 'other', status: 'close', urgent: false,
     title_ar:  'بناء مسجد',
     title_fr:  'Construction d\'une mosquée',
     target_ar: 'null',
